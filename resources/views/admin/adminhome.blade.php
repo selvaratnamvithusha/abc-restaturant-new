@@ -1,25 +1,25 @@
 
 <x-app-layout>
-
 </x-app-layout>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    @include("admin.admincss")
-  </head>
-  <body>
-
-    <div class="container-scroller">
-
-    @include("admin.navbar")
-
-    </div>
-
-    @include("admin.adminscript")
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
     
+      @include("admin.admincss")
+      
+    </head>
+    <body>
+  
+  
+      @include("admin.navbar")
+  
+      
+  
+      @include("admin.adminscript")
+      
+      
+    </body> 
+    </html>
 
-    
-  </body>
-</html> 
+
