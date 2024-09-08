@@ -21,9 +21,11 @@
                             <div class="message">
                                 <i class="fa fa-envelope"></i>
                                 <h4>Emails</h4>
-                                <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                <span><a href="#">hello@abcrestaurant.com</a><br><a href="#">info@abcrestaurant.com</a></span>
                             </div>
                         </div>
+                      
+  
                     </div>
                 </div>
             </div>
