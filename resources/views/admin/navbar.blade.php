@@ -30,7 +30,7 @@
         <li class="nav-item menu-items">
           <a class="nav-link" href="{{url('/viewreservation')}}">
             <span class="menu-icon">
-              <i class="mdi mdi-calendr-check"></i>
+              <i class="mdi mdi-calendar-multiselect"></i>
             </span>
             <span class="menu-title">Reservations</span>
           </a>
@@ -45,6 +45,17 @@
               <i class="mdi mdi-receipt"></i>
             </span>
             <span class="menu-title">Orders</span>
+          </a>
+        </li>
+
+
+
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{{url('/viewquery')}}">
+            <span class="menu-icon">
+              <i class="mdi mdi-message-text"></i>
+            </span>
+            <span class="menu-title">Query</span>
           </a>
         </li>
         

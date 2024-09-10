@@ -45,7 +45,8 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                            {{-- <img src="assets/images/klassy-logo.png" align="klassy cafe html template"> --}}
+                            <img src="assets/images/logo.jpg" align="klassy cafe html template">
 
 
                             <a class="menu-trigger">
@@ -151,6 +152,10 @@
                             <div class="main-white-button scroll-to-section">
                                 <a href="#reservation">Make A Reservation</a>
                             </div>
+
+                            <div class="main-white-button scroll-to-section">
+                            <a href="#query">Submit Query</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -228,6 +233,8 @@
    
 
     @include("reservation")
+
+    @include("query")
 
     <!-- ***** Menu Area Starts ***** -->
     <section class="section" id="offers">
@@ -511,7 +518,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                        {{-- <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">

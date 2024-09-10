@@ -28,9 +28,14 @@ Route::post("/update/{id}",[AdminController::class,"update"] );
 
 Route::get("/redirects",[HomeController::class,"redirects"] );
 
-Route::post("/reservation",[AdminController::class,"reservation"] );
+Route::post("/reservation",[AdminController::class,"reservation"] )->middleware('auth');
 
 Route::get("/viewreservation",[AdminController::class,"viewreservation"] );
+
+Route::post('/query', [AdminController::class, 'query'])->middleware('auth');
+
+Route::get('/viewquery', [AdminController::class, 'viewquery']);
+
 
 Route::post("/addcart/{id}",[HomeController::class,"addcart"] );
 

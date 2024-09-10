@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation Details</title>
+    <title>Query Details</title>
 
     <!-- Include Admin CSS -->
     @include('admin.admincss')
@@ -25,21 +25,19 @@
                         <tr>
                             <th scope="col" style="padding: 15px;">Name</th>
                             <th scope="col" style="padding: 15px;">Email</th>
-                            <th scope="col" style="padding: 15px;">Phone</th>
-                            <th scope="col" style="padding: 15px;">Date</th>
-                            <th scope="col" style="padding: 15px;">Time</th>
-                            <th scope="col" style="padding: 15px;">Message</th>
+                            <th scope="col" style="padding: 15px;">Subject</th>
+                            <th scope="col" style="padding: 15px;">Query</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($data as $reservation)
+                        @foreach ($data as $query)
                             <tr align="center">
-                                <td>{{ $reservation->name }}</td>
-                                <td>{{ $reservation->email }}</td>
-                                <td>{{ $reservation->phone }}</td>
-                                <td>{{ $reservation->date }}</td>
-                                <td>{{ $reservation->time }}</td>
-                                <td>{{ $reservation->message }}</td>
+                                <td>{{ $query->name }}</td>
+                                <td>{{ $query->email }}</td>
+                                <td>{{ $query->Subject }}</td>
+                                <td>{{ $query->Query }}</td>
+                               
                             </tr>
                         @endforeach
                     </tbody>

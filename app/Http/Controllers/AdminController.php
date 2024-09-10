@@ -8,6 +8,7 @@ use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Query;
 
 class AdminController extends Controller
 {
@@ -91,7 +92,7 @@ class AdminController extends Controller
     {
     
         $data = new reservation;
-
+              $data->usertype = Auth::id(); // Assuming users are logged in
               $data->name=$request->name;
               $data->email=$request->email;
               $data->phone=$request->phone;
@@ -137,4 +138,43 @@ class AdminController extends Controller
         $data=order::where('name', 'Like','%'.$search.'%')->orWhere('foodname', 'Like','%'.$search.'%')->get();
         return view('admin.orders', compact('data'));
     }
+
+    public function query(Request $request)
+    {
+        $request->validate([
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
+
+        $query = new Query;
+        $query->user_id = Auth::id(); // Assuming users are logged in
+        $query->subject = $request->subject;
+        $query->message = $request->message;
+        $query->save();
+
+        return redirect()->back()->with('success', 'Query submitted successfully!');
+    }
+
+
+    public function viewquery()
+    {
+
+        if(Auth::id())
+        {
+
+        
+        $data=query::all();
+
+        return view("admin.adminquery", compact("data"));
+        }
+
+        else 
+        {
+            return redirect('login');
+        }
+    }
+
+
+
+
 }
